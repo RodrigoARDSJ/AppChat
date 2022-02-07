@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<link rel="stylesheet" type="text/css" th:href="@{~/css/style.css}">
+<script src="https://kit.fontawesome.com/c10f18d4ea.js"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="chat-container">
+		<div class="chat-header">
+			<div class="user-container">
+				<span id="username" th:utext="${username}"></span> <a
+					th:href="@{/logout}">Logout</a>
+			</div>
+			<h3>Spring WebSocket Chat Demo</h3>
+		</div>
+		<ul id="messageArea">
+		</ul>
+		<form id="messageForm" name="messageForm">
+			<div class="input-message">
+				<input type="text" id="message" autocomplete="off"
+					placeholder="Type a message..." />
+				<button type="submit" class="buttonMessage">
+					<i class="fas fa-paper-plane"></i>
+				</button>
+			</div>
+		</form>
+	</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>
