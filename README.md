@@ -6,5 +6,5 @@ Projeto para aprendizagem da tecnologia WebSockets na linguagem de programção 
 - HTML
 - CSS
 - JavaSrcipt
-# Link paraacessar o site:
+# Link para acessar o site:
 - https://springwebsocketschat.herokuapp.com/
